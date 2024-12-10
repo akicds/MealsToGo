@@ -71,6 +71,7 @@
         "compound_code": "",
         "global_code": "",
       },
+      "rating": 4.3,
       "reference": "",
       "scope": "",
       "types": [
@@ -83,6 +84,7 @@
         "point_of_interest",
         "establishment"
       ],
+      "user_ratings_total": 321,
       "vicinity": "Lange Gasthuisstraat 45, Antwerpen"
     },
     {
@@ -489,7 +491,7 @@
       "place_id": "some place id 12",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
