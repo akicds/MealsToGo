@@ -37,7 +37,7 @@ export const AppNavigator = () => (
     <NavigationContainer>
         <Tab.Navigator
             screenOptions={createScreenOptions}>
-            <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
+            <Tab.Screen name="Restaurants" component={RestaurantsNavigator} options={{ headerShown: false }} />
             <Tab.Screen name="Map" component={MapScreen} options={{ headerShown: false }}/>
             <Tab.Screen name="Settings" component={Settings} />
         </Tab.Navigator>
