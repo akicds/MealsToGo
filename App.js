@@ -35,23 +35,6 @@ if (!getApps().length) {
 }
  
 export default function App() {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
- 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const email = process.env.EXPO_PUBLIC_AUTH_EMAIL;
-  //     const password = process.env.EXPO_PUBLIC_AUTH_PASSWORD;
-      
-  //     signInWithEmailAndPassword(auth, email, password)
-  //     .then((user) => {
-  //       setIsAuthenticated(true);
-  //     })
-  //     .catch((e) => {
-  //       console.error(e);
-  //     });
-  //   }, 3000);
-  // }, []);
-
 
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
