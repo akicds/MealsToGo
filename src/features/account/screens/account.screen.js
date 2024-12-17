@@ -7,6 +7,7 @@ import {
   AccountCover, 
   Title, 
   AuthButton,
+  StyledLottieView,
 } from "../components/account.styles";
 
 
@@ -14,6 +15,7 @@ export const AccountScreen = ( {navigation} ) => {
   return (
     <AccountBackground>
       <AccountCover/>
+      <StyledLottieView/>
       <Title>
         Meals To Go
       </Title>
