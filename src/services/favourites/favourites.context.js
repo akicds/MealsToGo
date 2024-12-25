@@ -11,8 +11,12 @@ export const FavouritesContextProvider = ({ children }) => {
 
   const saveFavourites = async (value, uid) => {
     try {
-      const jsonValue = JSON.stringify(uid);
-      await AsyncStorage.setItem(`@favourites-${uid}`, jsonValue);
+      if (Array.isArray(value)) {
+        const jsonValue = JSON.stringify(value);
+        await AsyncStorage.setItem(`@favourites-${uid}`, jsonValue);
+      } else {
+        console.log("Error: Attempted to save non-array value to AsyncStorage");
+      }
     } catch (e) {
       console.log("error storing", e); // in case of any error
     }
@@ -22,10 +26,21 @@ export const FavouritesContextProvider = ({ children }) => {
     try {
       const value = await AsyncStorage.getItem(`@favourites-${uid}`);
       if (value !== null) {
-        setFavourites(JSON.parse(value));// value previously stored
+        const parsedValue = JSON.parse(value);
+  
+        // String içeren hatalı diziyi temizler
+        if (Array.isArray(parsedValue)) {
+          const filteredFavourites = parsedValue.filter(
+            (item) => typeof item === "object" && item !== null
+          );
+          setFavourites(filteredFavourites);
+        } else {
+          console.error("Error: Loaded favourites is not an array!");
+          setFavourites([]);
+        }
       }
     } catch (e) {
-      console.log("error loading", e);// error reading value
+      console.log("error loading", e); // error reading value
     }
   };
 
