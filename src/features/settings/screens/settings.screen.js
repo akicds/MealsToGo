@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { TouchableOpacity } from "react-native";
 import styled from "styled-components";
 
 import { List, Avatar } from "react-native-paper";
@@ -21,7 +22,9 @@ export const SettingsScreen = ({ navigation }) => {
   return (
     <SafeArea>
       <AvatarContainer>
-        <Avatar.Image size={150} icon="account-settings" source={require('../../../../assets/avatar.png')}/>
+        <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+          <Avatar.Image size={150} icon="account-settings" source={require('../../../../assets/avatar.png')}/>
+        </TouchableOpacity>
       <Spacer position="top" size="large">
       <Text variant="label">{user.email}</Text>
       </Spacer>

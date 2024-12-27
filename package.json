@@ -21,9 +21,12 @@
     "camelize": "^1.0.1",
     "chalk": "^5.3.0",
     "dotenv": "^16.4.7",
+    "expo-camera": "^16.0.10",
     "expo-font": "~13.0.1",
     "expo-status-bar": "~2.0.0",
+    "expo-updates": "^0.26.10",
     "firebase": "^11.0.2",
+    "lottie-react-native": "7.1.0",
     "metro-resolver": "^0.81.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -38,8 +41,7 @@
     "react-native-vector-icons": "^10.2.0",
     "react-native-web": "~0.19.13",
     "react-native-webview": "^13.12.5",
-    "styled-components": "^6.1.13",
-    "lottie-react-native": "7.1.0"
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
